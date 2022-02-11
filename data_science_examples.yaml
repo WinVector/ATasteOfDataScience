@@ -1,0 +1,35 @@
+name: data_science_examples
+channels:
+  - defaults
+  - conda-forge
+dependencies:
+  - numpy
+  - pandas
+  - scipy
+  - jupyterlab
+  - gensim
+  - lime
+  - opencv
+  - python=3.9.*
+  - scikit-learn
+  - scikit-image
+  - seaborn
+  - matplotlib
+  - xgboost
+  - xlrd
+  - PyYAML
+  - black
+  - graphviz
+  - twine
+  - pytest
+  - pytest-cov
+  - twine
+  - keras
+  - tensorflow
+  - pip
+  - pip:
+    - pdoc
+    - vtreat
+    - data_algebra
+    - wvpy
+
