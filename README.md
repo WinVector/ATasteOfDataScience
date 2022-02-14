@@ -33,6 +33,19 @@ Industry practice: in the factory
 
 To arrange sessions (either in person on by teleconference) please reach out to John Mount at jmount@win-vector.com
 
+
+--------
+
+Note: to get JupyterLab from [Anaconda](https://www.anaconda.com) to run on a Mac we have found one must run
+
+```
+jupyter server extension disable nbclassic
+```
+
+on the command line in the conda environment ([source](https://lifesaver.codes/answer/extensionmanager-object-has-no-attribute-extensions-when-starting-jupyterlab-10228)).
+
+Baring that one can run JupyterNotebook, [VSCode](https://code.visualstudio.com), or [DataSpell](https://www.jetbrains.com/dataspell/) ([PyCharm](https://www.jetbrains.com/help/pycharm/jupyter-notebook-support.html)'s JupyterNotebook support may also have issues).
+
 --------
 
 Copyright Win Vector LLC 2022 https://www.win-vector.com/
