@@ -14,7 +14,7 @@ Course purpose:
 Our exercises: on the laptop
 
   * Small scale idealized examples on your machine in Python using the CPU (not a GPU or a TPU)
-  * Link: https://github.com/WinVector/ATasteOfDataScience , however **this is intended for a live guided session**
+  * Link: https://github.com/WinVector/ATasteOfDataScience , however **this is intended for a live guided session** (with detialed slides/hand-outs)
   * Goal: play with the code and concepts
   * An experience you learn from, and move on from 
 
