@@ -22,7 +22,9 @@ To run we then, in a running `Anaconda Navigator`:
   * Make sure the `Applications` pull-down is on data_science_examples
   * Click Launch on the `JupyterLab` pane (if that fails one can fall back to `JupyterNotebook` or `PyCharm`)
 
-The instal YAML is [data_science_examples.yaml](data_science_examples.yaml), and the exact versions used (listed via `conda list`) is [data_science_examples_versions.txt](data_science_examples_versions.txt).
+The installation YAML is [data_science_examples.yaml](data_science_examples.yaml), and the exact versions used (listed via `conda list`) is [data_science_examples_versions.txt](data_science_examples_versions.txt).
+
+We suggest re-running some of the example `.ipynb` files to see if the install is working.
 
   
 ## Why to install
