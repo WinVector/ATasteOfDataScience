@@ -61,3 +61,14 @@ Make sure one has selected the data_science_examples environment.
 
 This is a version incompatibility between `Tensorflow` and `numpy`.  The web-advice is to pin numpy at something like `1.9.1` ([ref](https://www.reddit.com/r/tensorflow/comments/lgcgby/numpyrelated_error_when_building_model/)).
 
+We, instead, moved forward from the conda versions to pip versions that seem to be past this era of incompatibility. Exact versions know to work for us are [here](data_science_examples_versions.txt).
+
+### import kerans 
+
+One no longer imports from Keras when using Tensorflow. Instead one imports Tensorflow's Keras API adapters as:
+
+```
+# used to be: import keras
+import tensorflow.keras as keras
+```
+
