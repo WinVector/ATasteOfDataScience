@@ -34,6 +34,12 @@ Installing software is pain. However, we feel it is worth the effort when possib
 
 However, *always* using remote services and pre-built containers has its own risks and promotes a learned helplessness. By working through a single install once we are trying to isolate many issues into one session. Also, installing must be possible- else how are remote services and containers provisioned in the first place?
 
+## Additional artifacts
+
+Everything needed to re-run the examples is installed by the above instruction.
+
+The only variation from this, is to use train on a different data set using GloVe encodings one needs to download `glove.840B.300d.zip` into `data/GloVe` from https://nlp.stanford.edu/projects/glove/ .  We have not automated this as a courtesy to the authors.
+
 ## Known Issues / Fixes
 
 
