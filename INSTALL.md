@@ -57,4 +57,7 @@ Baring that, one can run JupyterNotebook, [VSCode](https://code.visualstudio.com
 
 Make sure one has selected the data_science_examples environment.
 
+### "Cannot convert a symbolic Tensor (bidirectional/forward_lstm/strided_slice:0) to a numpy array."
+
+This is a version incompatibility between `Tensorflow` and `numpy`.  The web-advice is to pin numpy at something like `1.9.1` ([ref](https://www.reddit.com/r/tensorflow/comments/lgcgby/numpyrelated_error_when_building_model/)).
 
