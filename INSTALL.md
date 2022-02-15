@@ -49,7 +49,7 @@ jupyter server extension disable nbclassic
 
 on the command line in the conda environment ([source](https://lifesaver.codes/answer/extensionmanager-object-has-no-attribute-extensions-when-starting-jupyterlab-10228)).
 
-Baring that, one can run JupyterNotebook, [VSCode](https://code.visualstudio.com), or [DataSpell](https://www.jetbrains.com/dataspell/) ([PyCharm](https://www.jetbrains.com/help/pycharm/jupyter-notebook-support.html)'s JupyterNotebook support may also have issues).
+Baring that, one can run JupyterNotebook, [VSCode](https://code.visualstudio.com), or [DataSpell](https://www.jetbrains.com/dataspell/). [PyCharm](https://www.jetbrains.com/help/pycharm/jupyter-notebook-support.html) JupyterNotebook support may also have issues.
 
 ### Packages don't seem to be installed
 
