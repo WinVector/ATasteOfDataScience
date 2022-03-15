@@ -57,14 +57,33 @@ class GloveEncoder():
         self.k = k
         self.tokenizer = None  # maps strings to tokens
         self.code_book = None  # maps tokens to vectors
+        self.word_embed_dim = None  # not known yet
+        self.encode_dim = None  # not known yet
 
     def fit(self, X, y=None):
         tokenizer, code_book = load_coding_bundle(train_text=X, glove_path=self.glove_path)
         self.tokenizer = tokenizer
         self.code_book = code_book
+        k0, v0 = next(iter(self.code_book.items()))
+        self.word_embed_dim = len(v0)
+        self.encode_dim = len(self._encode_from_vecs([]))
         return self
+    
+    def _encode_from_vecs(self, vecs):
+        k = self.k
+        if len(vecs) < 1:  # missed all tokens
+            vecs = [numpy.zeros(self.word_embed_dim)]
+        if len(vecs) < k:
+            vecs = vecs + [vecs[len(vecs)-1]] * (k - len(vecs))
+        # build k-grams
+        k_grams = [numpy.concatenate(
+            [vecs[i + d] for d in range(k)]
+        ) for i in range(len(vecs) - (k - 1))]
+        assert len(k_grams) > 0   # should be true by earlier guards, easier to catch here
+        return numpy.average(numpy.asarray(k_grams), axis=0)  # bag of codes model
 
-    def encode_text(self, txt: str, *, k: int = 2):
+    def encode_text(self, txt: str):
+        k = self.k
         assert isinstance(k, int)
         assert k > 0
         toks = self.tokenizer.texts_to_sequences([txt])[0]
@@ -75,17 +94,9 @@ class GloveEncoder():
                 vecs.append(vec)
             except KeyError:
                 pass
-        assert len(vecs) > 0  # missed all tokens
-        while len(vecs) < k:
-            vecs = vecs + [vecs[len(vecs)-1]]
-        # build k-grams (and some cross terms)
-        k_grams = [numpy.concatenate(
-            [vecs[i + d] for d in range(k)]
-        ) for i in range(len(vecs) - (k - 1))]
-        assert len(k_grams) > 0   # should be true by earlier guards, easier to catch here
-        return numpy.average(numpy.asarray(k_grams), axis=0)  # bag of codes model
+        return self._encode_from_vecs(vecs)
 
     def transform(self, X):
-        rows = [self.encode_text(txt, k=self.k) for txt in X]
+        rows = [self.encode_text(txt) for txt in X]
         frame = pandas.DataFrame(rows)
         return frame
