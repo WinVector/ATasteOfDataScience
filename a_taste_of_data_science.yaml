@@ -1,0 +1,37 @@
+name: a_taste_of_data_science
+channels:
+  - defaults
+  - conda-forge
+dependencies:
+  - PyYAML
+  - black
+  - graphviz
+  - jupyterlab
+  - lime
+  - matplotlib
+  - opencv
+  - pandas
+  - pytest
+  - pytest-cov
+  - python=3.9.*
+  - scikit-image
+  - scikit-learn
+  - scipy
+  - seaborn
+  - twine
+  - xgboost
+  - xlrd
+  - pip
+  - pip:
+    - data_algebra
+    - keras
+    - numpy
+    - pdoc
+    - tensorflow
+    - tensorflow_hub
+    - tensorflow_text
+    - tensorflow_datasets
+    - transformers
+    - vtreat
+    - wvpy
+
