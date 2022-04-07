@@ -4,7 +4,7 @@ Working an example of supervised machine learning in Python
 
 -------
 
-Supporting material for workshop on beginning data science in Python. Used as follow-up material to lecture.
+Supporting material for workshop on beginning data science in Python. Used as follow-up material to lecture. A short video on how to install the required software on a Mac can be found [here](https://youtu.be/j-op3L_RpwA).
 
 Course purpose:
 
