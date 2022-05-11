@@ -24,14 +24,18 @@ dependencies:
   - pip
   - pip:
     - data_algebra
+    - jupyter
     - keras
     - numpy
     - pdoc
+    - plotly
+    - Prophet
     - tensorflow
     - tensorflow_hub
     - tensorflow_text
     - tensorflow_datasets
     - transformers
+    - statsmodels
     - vtreat
     - wvpy
 
