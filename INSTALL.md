@@ -4,6 +4,20 @@ A taste of "install hell."
 
 ## How to install
 
+### If life were fair
+
+The install would be:
+
+  1) Clone the repository.
+  2) If an old environment is present: `conda remove --name a_taste_of_data_science --all`
+  2) `conda env create -f a_taste_of_data_science.yaml`
+
+
+And that would be it. Some days this works, some days it does not.
+  
+
+## Some details
+
 Honestly, installing and versions are a bit of a nightmare for Python, Jupyter, and some combinations of data science packages.
 
 Our instructions are oriented towards a MacOS system. Similar should work on Linux or Windows, however Linux does also have its own package managers.
