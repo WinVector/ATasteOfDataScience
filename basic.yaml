@@ -1,0 +1,31 @@
+name: basic
+channels:
+  - defaults
+  - conda-forge
+dependencies:
+  - PyYAML
+  - black
+  - graphviz
+  - jupyterlab
+  - lime
+  - matplotlib
+  - opencv
+  - pandas
+  - pytest
+  - pytest-cov
+  - python
+  - scikit-image
+  - scikit-learn
+  - scipy
+  - seaborn
+  - twine
+  - xgboost
+  - xlrd
+  - pip
+  - pip:
+    - jupyter
+    - numpy
+    - pdoc
+    - plotly
+    - statsmodels
+
